@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Consolas, monospace;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  line-height: 1.7;
+}
+
+/* ---------- Header ---------- */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(180deg, #161b22, #0d1117);
+}
+
+header h1 {
+  color: #58a6ff;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.scroll-hint {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+/* ---------- Sections ---------- */
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+h2 {
+  color: #58a6ff;
+  border-bottom: 1px solid #30363d;
+  padding-bottom: 8px;
+  margin-bottom: 30px;
+}
+
+/* ---------- Skills ---------- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.skills-grid div {
+  background-color: #161b22;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+/* ---------- Projects ---------- */
+.project-card {
+  background-color: #161b22;
+  padding: 25px;
+  border-radius: 6px;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+.tech {
+  color: #8b949e;
+  font-size: 0.9rem;
+}
+
+/* 🔗 Project GitHub Link (MISSING EARLIER) */
+.project-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #58a6ff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #79c0ff;
+  text-decoration: underline;
+}
+
+/* ---------- Experience ---------- */
+.experience li {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* ---------- Links ---------- */
+a {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 25px;
+  border-top: 1px solid #30363d;
+  font-size: 0.9rem;
+}
+
+/* ---------- Animations ---------- */
+.fade-in {
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
